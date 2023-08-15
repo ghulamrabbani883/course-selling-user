@@ -15,7 +15,7 @@ import {
   ListItemText,
   Typography,
 } from "@mui/material";
-import { useState, useEffect, MouseEvent } from "react";
+import { useEffect, MouseEvent } from "react";
 
 import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
