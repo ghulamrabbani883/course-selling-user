@@ -26,7 +26,7 @@ import Loader from "./Loader";
 const SingleCourse = () => {
   const { courseId } = useParams();
   const navigate = useNavigate()
-  const [isPurchased, setIsPurchased] = useState(false)
+  const isPurchased = false
   const token = parseToken();
   const [{singleCourse, isCourseLoading}, setCourseState] = useRecoilState(courseState)
   const arr = [1,2,3,4,5,6,7,8,9,10]
@@ -46,6 +46,7 @@ const SingleCourse = () => {
       return {...prev, isCourseLoading:false}
     })
     alert('Course is added to your purchased list');
+    navigate('/purchased')
     console.log(res.data);
   };
 
