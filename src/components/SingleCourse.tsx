@@ -46,7 +46,7 @@ const SingleCourse = () => {
       return {...prev, isCourseLoading:false}
     })
     alert('Course is added to your purchased list');
-    navigate('/purchased')
+    navigate('/courses/purchased')
     console.log(res.data);
   };
 
