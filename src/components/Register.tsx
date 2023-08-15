@@ -38,7 +38,7 @@ const Register = () => {
       localStorage.setItem("courseToken", res.data.token);
       localStorage.setItem('publicId', res.data.data.id)
       setUser((prev)=>{
-        return {...prev,isUserLoading:false, user:res.data.data}
+        return {...prev, isUserLoading:false, isAuthenticated:true, user:res.data.data}
       })
       alert(res.data.msg);
       navigate("/courses/purchased");
